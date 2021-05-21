@@ -79,6 +79,12 @@ box-shadow: 1px 9px 9px -8px rgba(0,0,0,0.50);
   }
  
 }
+
+@media screen and (max-width:600px){
+  img{
+    display: none;
+  }
+}
 </style>
 
 
