@@ -1,0 +1,29 @@
+<form
+            class="user-profile_crete-twoot"
+            @submit.prevent="createNewTwoot"
+            :class="{ '--exceeded': newTwootCharCount > 100 }"
+          >
+            <label for="newTwoot"
+              ><strong>New Twoot</strong> {{ newTwootCharCount }}/180</label
+            >
+            <textarea
+              id="newTwoot"
+              rows="4"
+              v-model="newTwootContent"
+            ></textarea>
+            <!-- Option Type -->
+            <div class="user-profile_create-twoot-type">
+              <label for="newTwootType"><strong>Type</strong></label>
+              <select id="newTwootType" v-model="selectedTwootType">
+                <option
+                  :value="option.value"
+                  v-for="(option, index) in twootTypes"
+                  :key="index"
+                >
+                  {{ option.name }}
+                </option>
+              </select>
+              <button class="btn">Twoot it </button>
+            </div>
+            
+          </form>
