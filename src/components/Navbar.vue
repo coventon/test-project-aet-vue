@@ -81,8 +81,14 @@ box-shadow: 1px 9px 9px -8px rgba(0,0,0,0.50);
 }
 
 @media screen and (max-width:600px){
-  img{
-    display: none;
+  // img{
+  //   display: none;
+  // }
+  nav{
+    flex-direction: column;
+  }
+  .user{
+    margin-top: 20px;
   }
 }
 </style>
